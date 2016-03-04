@@ -1,0 +1,130 @@
+﻿.signupform
+{
+	width: 35%;
+	height: 230px;
+	padding: 5px 10px 5px 10px;
+	border: 2px silver solid;
+	vertical-align: top;
+
+}
+.whoisgoing
+{
+	width: 50%;
+	height: 230px;
+	padding: 10px 15px 10px 15px;
+	border: 2px silver solid;
+	vertical-align: top;
+}
+.signuphdr 
+{
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+.mixerinfo
+{
+	border: 2px double blue;
+	border-style: double;
+	padding: 10px 0px 10px 0px;
+	margin: 5px 5px 3px 5px;
+	width: 898px;
+/*	background-color: #F0F3FF; */
+}
+.mixerinfo h2, h3
+{
+	padding: 3px 0px 3px 0px;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	font-weight: bold;
+}
+.mixerinfo h4 
+{
+	font-size: large;
+	font-weight: bold;
+	padding: 4px 0px 4px 0px;
+	text-align: center;
+	margin: 2px;
+}
+.mixerinfo p
+{
+	padding: 2px 5px 2px 5px;
+	margin: 2px 5px 2px 5px;
+
+}
+.mixerinfo table
+{
+	margin: 5px 24px 5px 24px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	table-layout: auto;
+	width: 840px;
+
+}
+.mixerinfo td
+{
+	text-align: left;
+	width: 50%;
+	border: 1px solid gray;
+	padding: 0px;
+}
+.mixerinfo li
+{
+	color: black;
+}
+.special 
+{
+	text-align: center;
+	font-weight: bold;
+	color: black;
+}
+#rule 
+{
+	text-align: left;
+	color: #603;
+	font-size: medium;
+	border: 2px solid red;
+
+	background-color: #ffc;
+	margin: 2px 10px 2px 10px;
+}
+#rule p
+{
+	margin: 15px;
+}
+
+#signup 
+{
+	font-size: medium;
+}
+.infohdr 
+{
+	text-align: center;
+	font-weight: bold;
+}
+.infodate
+{
+	font-weight: bold;
+	text-align: center;
+}
+.PopupBody
+{
+	font-size: medium;
+	padding: 5px 20px 20px 20px;
+}
+.PopupHeader 
+{
+	padding-top: 5px;
+	padding-left: 20px;
+}
+.PopupControls 
+{
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+.closed 
+{
+	font-size: large;
+	color: blue;
+	line-height: 1.6em;
+}

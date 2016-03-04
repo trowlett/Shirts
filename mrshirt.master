@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>MRMISGA Shirts</title>
+<link href="http://mrmisga.org/styles/style2.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="http://mrmisga.org/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link rel="shortcut icon" href="http://mrmisga.org/favicon.ico" />
+<asp:ContentPlaceHolder id="HeadContent" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<asp:Image ID="Hdr_Image" runat="server" style="width: 920px; padding-left: 20px; padding-right: 20px" 
+			ImageUrl="http://mrmisga.org/images/Musket-Ridge-MISGA-hdr-v1.jpg" ImageAlign="AbsMiddle" />
+		
+	
+	</div>
+	<div id="print-hdr">
+	<h1>Musket Ridge MISGA - <span style="font-size: .75em">Myersville, Maryland</span></h1></div>
+	<!-- End Masthead -->
+	<div id="tools">
+	</div>
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		
+		<ul>
+			<li><a href="http://mrmisga.org/default.htm" title="Main Web Site for Musket Ridge MISGA">MR MISGA</a></li>
+
+			<li><a href="Default.aspx" title="Learn about ordering Musket Ridge MISGA Golf Shirts">Shirt Info</a></li>
+			<li><a href="PlaceOrder.aspx" title="Order a Musket Ridge MISGA Golf Shirt">Order Shirt</a></li>
+			<li><a href="Review.aspx" title="Review your Shirt Order">Review Order</a></li>
+			<li><a href="summary.aspx" title="View a summary of all orders">Summary of Orders</a></li>
+		</ul>
+ 
+	</div>
+	<!-- End Navigation -->
+	<div id="page_content">
+	<asp:ContentPlaceHolder id="MainContent" runat="server">
+	</asp:ContentPlaceHolder>
+	</div>  <!-- page_content -->
+		<div id="footer">
+		<p><a href="http://mrmisga.org/default.htm">Home</a> | 
+			<a href="http://mrsga.org/Schedule/Default.aspx">Schedule</a> | 
+			<a href="http://mrmisga.org/results/results_main.html">Results</a> | 
+			<a href="http://mrmisga.org/about/about.html">Join Info</a> | 
+			<a href="http://mrmisga.org/news/default.html">News</a> | 
+			<a href="http://mrmisga.org/handicap/handicap.html">Handicap</a> | 
+<!--		<a href="photo_gallery/default.html">Photo Gallery</a> | -->
+			<a href="http://mrmisga.org/information_links/default.html">Links</a> |
+<!--		<a href="faq/default.html">FAQ</a> | -->
+			<a href="http://mrmisga.org/contact/default.html">Contact</a> | 
+			<a href="http://www.musketridge.com" target="_blank" title="Musket Ridge Website">Musket Ridge</a> | </p>
+	</div>
+	<!-- End Footer -->
+	<div id="copyright">
+	<p>Page last modified 
+	    April 21, 2012
+					<br />
+		&copy Copyright 2011, 2012 by Thomas M. Rowlett, All Rights Reserved</p>
+		</div>
+	</div>  <!-- Container -->
+
+</form>
+
+</body>
+
+</html>
