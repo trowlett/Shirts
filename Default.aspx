@@ -19,8 +19,7 @@
 #to_order p {
             font-weight: bold;
         }
- </style>
-    <% ShirtDeadline = "4//29//2015"; %>
+        </style>
     </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
@@ -31,27 +30,34 @@
     <hr />
     <p>
         We will again be putting in an order for Musket Ridge MISGA shirts for this 
-        season. The shirt is from Under Armour. It will have the Musket Ridge Golf 
+        season. The shirt is from Nike. It will have the Musket Ridge Golf 
         Club logo on the front and MISGA on the sleeve. 
 
     </p>
     <p>
-        Here is a link to the Under Armour Catalog: Click here: 
-        <a href="http://s7d4.scene7.com/s7viewers/html5/eCatalogViewer.html?serverUrl=http://s7d4.scene7.com/is/image/&config=Scene7SharedAssets/Universal_HTML5_eCatalog&contentRoot=http://s7d4.scene7.com/skins/&asset=GearForSports//ua_golf">UA Golf Spring 15</a>
+        Here is a link to the Nike Catalog showing the Nike Victory solid color shirt.<br /> 
+        <a href="http://store.nike.com/us/en_us/pd/victory-solid-standard-fit-golf-polo/pid-10741145/pgid-10940844">http://store.nike.com/us/en_us/pd/victory-solid-standard-fit-golf-polo/pid-10741145/pgid-10940844</a>
         &nbsp;&nbsp;
     </p>
     <p>
-        The color we will be ordering is &#39;Alpine&#39; (similar to the past blue colors 
-        we have used).&nbsp; See page 4 <span class="style1">(look for the page number in the upper or lower right side of the page)</span> for the men&#39;s solid colors.&nbsp; See page 26 for 
-        the Women&#39;s solid colors. 
+        The color we will be ordering is “University blue/white” and is similar to the color shirt we have traditionally 
+        used.&nbsp; This exact color is not shown on the website, but if you are interested in seeing it you can ask 
+        the proshop to show you the Nike catalog. 
 
     </p>
     <p>
-        The cost of the shirt is $49, plus Md. sales tax; for a total of $51.94. 
-        As in the past MR Misga will pay $10 towards the first shirt you order. 
+        There is also a women's version which you can see here:<br />
+        <a href="http://store.nike.com/us/en_us/pd/victory-solid-golf-polo/pid-10741510/pgid-10940906">http://store.nike.com/us/en_us/pd/victory-solid-golf-polo/pid-10741510/pgid-10940906</a>
+        &nbsp;</p>
+    <p>
+        The color for the women's shirt is Chalk blue/white.
+    </p>
+    <p>
+        The cost of the shirt is $53, plus Md. sales tax for a total of $56.18. 
+        As in the past Musket Ridge MISGA will pay $10 towards the first shirt you order. 
         You can order additional shirts if you wish, in whatever color you wish, 
-        but the first order must be in the Alpine color. Additional shirts ordered 
-        will be at the full price. 
+        but the first order must be in the University blue/white, or, for ladies Chalk blue/white. 
+<!--        Additional shirts ordered will be at the full price. -->
 
     </p>
     <div id="to_order">
@@ -62,14 +68,14 @@
                 </li>
             <li>You may review your completed order by clicking on the Review Order tab.</li>
             <li>You will be notified when the shirt order has arrived at the Golf Shop. </li>
-            <li>To change or cancel your order, contact me via email 
+            <li>To change or cancel your order, contact Tom Rowlett via email 
                 <a href="mailto:tom.rowlett@gmail.com?subject=Change MR MISGA Shirt Order">Tom.Rowlett@gmail.com</a> or phone (301) 473-4785.</li>
         </ul>
     </div>
         <p class="bold">To pay:</p>
     <p>
-        You can do this by sending the Musket Ridge Pro Shop a check, calling them to pay via credit 
-        card, or paying in person at the pro shop by 
+        You can do this by sending the Musket Ridge Pro Shop a check check (in the amount of $46.18 for the first shirt and $56.18 for each additional shirt), 
+        calling them to pay via credit card, or paying in person at the pro shop by 
     <asp:Label ID="lblPrePayDate" runat="server" Text="PrePay Date" ForeColor="Firebrick"></asp:Label>. 
 
     </p>
@@ -82,13 +88,18 @@
     <div id="summary">
         To summarize: if you wish to order a shirt this year: 
             <ol><li>
-                go the the MR MISGA website to place the order; and 
+                Click on the Order Shirt tab above; and 
                 </li>
                 <li>
                     pay the pro shop by <asp:Label ID="lblPPD2" runat="server" Text="'PrePay Date'"></asp:Label>. 
                 </li></ol>
             <p>The shirts should be ready 3 to 4 weeks after that.&nbsp;
         </p>
+        <p>
+            Also, we must have a minimum of 20 shirts ordered.  
+            So, it is possible that there will be no shirts ordered this year if we do not meet this minimum.
+        </p>
     </div>
-    <br />
+    
+    <hr />
 </asp:Content>

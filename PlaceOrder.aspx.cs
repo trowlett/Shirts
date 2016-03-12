@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 
 public partial class PlaceOrder : System.Web.UI.Page
 {
+    public string MensRequiredShirtColor;
+    public string WomensRequiredShirtColor;
     public string RequiredShirtColor;
     public string CustomerName;
     protected static string Proper(string s)
@@ -45,8 +47,11 @@ public partial class PlaceOrder : System.Web.UI.Page
             lblNoOrders.Text = "<h2>Today is after "+enddate.ToLongDateString()+". Sorry no more orders are accepted.</h2>";
             OrderPanel.Visible = false;
                     }
-        RequiredShirtColor = ConfigurationManager.AppSettings["DefaultShirtColor"];
+        MensRequiredShirtColor = ConfigurationManager.AppSettings["MensDefaultShirtColor"].ToString();
+        WomensRequiredShirtColor = ConfigurationManager.AppSettings["WomensDefaultShirtColor"].ToString();
+        RequiredShirtColor = MensRequiredShirtColor;
     }
+
     protected void ddlShirt_SelectedIndexChanged(object sender, EventArgs e)
     {
         if (ddlShirt.SelectedIndex == 0)
@@ -94,7 +99,7 @@ public partial class PlaceOrder : System.Web.UI.Page
         string fname = Proper(tbFirstName.Text.Trim());
         CustomerName = fname + " " + lname;
         int qty = Convert.ToInt32(ddlQty.SelectedValue);
-        string color = ConfigurationManager.AppSettings["DefaultShirtColor"];
+        string color = MensRequiredShirtColor;
         string size = "";
         lblStyle.Visible = false;
         string style = ddlShirt.SelectedValue.ToString();
@@ -107,17 +112,19 @@ public partial class PlaceOrder : System.Web.UI.Page
             if (ddlShirt.SelectedIndex == 1)
             {
                 color = ddlColorMens.SelectedValue.ToString();
+                RequiredShirtColor = MensRequiredShirtColor;
                 size = ddlSizeMens.SelectedValue.ToString();
             }
             if (ddlShirt.SelectedIndex == 2)
             {
                 color = ddlColorLadies.SelectedValue.ToString();
+                RequiredShirtColor = WomensRequiredShirtColor;
                 size = ddlSizeLadies.SelectedValue.ToString();
             }
             //                lblShirtColor.Text = color;
             //                lblShirtSize.Text = size;
            Order ord = new Order();
-           bool OrderOK = ord.addOrder(lname, fname, qty, style, size, color);
+           bool OrderOK = ord.addOrder(lname, fname, qty, style, size, color, RequiredShirtColor);
             //                lblCustID.Text = ord.CustomerID.ToString();
             if (OrderOK)
             {

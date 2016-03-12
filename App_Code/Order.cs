@@ -20,14 +20,14 @@ public class Order
 //	public string requiredColor = "Bimini";
 	private Customers NewCustomer;
  
-	protected bool CheckForRequiredShirt(int cid)
+	protected bool CheckForRequiredShirt(int cid, string reqColor)
 	{
         int custID = cid;
-        string requiredColor = ConfigurationManager.AppSettings["DefaultShirtColor"].ToString();
+        string requiredColor = reqColor;
 		bool ok = false;
 		string MRMISGADBConn = ConfigurationManager.ConnectionStrings["MRMISGADBConnect"].ToString();
 		MRMISGADB db = new MRMISGADB(MRMISGADBConn);
-		var item = db.Shirts.FirstOrDefault(s => s.CustID == cid && s.Color == requiredColor);
+		var item = db.Shirts.FirstOrDefault(s => s.CustID == cid && s.Color == requiredColor && s.Cancel == 0);
 //        Shirts item = db.Shirts.FirstOrDefault(s => s.CustID == custID && s.Color == requiredColor);
 //        var item = from s in db.Shirts
 //                   where (s.CustID == custID && s.Color == requiredColor)
@@ -39,17 +39,17 @@ public class Order
 		return ok;
 	}
 
-	public bool addOrder(string ln, string fn, int qty, string style, string size, string color)
+	public bool addOrder(string ln, string fn, int qty, string style, string size, string color, string reqColor)
 	{
 		bool result = false;
-        string requiredColor = ConfigurationManager.AppSettings["DefaultShirtColor"].ToString();
+        string requiredColor = reqColor;
 
 		// get member id
 		MrTimeZone tz = new MrTimeZone();
 		IsNewCustomer = getCustomerID(ln, fn);
 
 		// validate that member has ordered at least one bimini blue shirt
-		bool hasRequiredShirt = CheckForRequiredShirt(CustomerID);
+		bool hasRequiredShirt = CheckForRequiredShirt(CustomerID, reqColor);
 		
 		
 		// if so add order to database and return true

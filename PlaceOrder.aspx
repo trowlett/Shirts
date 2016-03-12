@@ -80,8 +80,8 @@
 			onselectedindexchanged="ddlShirt_SelectedIndexChanged" Width="205px" 
 			CausesValidation="True">
 			<asp:ListItem Selected="True"> (Select one)</asp:ListItem>
-			<asp:ListItem>Men&#39;s UA Polo</asp:ListItem>
-			<asp:ListItem>Women&#39;s UA Polo</asp:ListItem>
+			<asp:ListItem>Men&#39;s Nike Victory</asp:ListItem>
+			<asp:ListItem>Women&#39;s Nike Victory</asp:ListItem>
 		</asp:DropDownList>
 		<asp:Label ID="lblStyle" runat="server" 
             Text=" (Color and Size options will show once Shirt Style is selected)" 
@@ -112,31 +112,20 @@
 	</td>
 	<td>
 		<asp:DropDownList ID="ddlColorMens" runat="server" Width="205px">
-		    <asp:ListItem>Alpine</asp:ListItem>
-            <asp:ListItem>White</asp:ListItem>
-            <asp:ListItem>Midnight Navy</asp:ListItem>
-            <asp:ListItem>Blue Jet</asp:ListItem>
-            <asp:ListItem>Carolina Blue</asp:ListItem>
-            <asp:ListItem>Royal</asp:ListItem>
-            <asp:ListItem>American Blue</asp:ListItem>
-		    <asp:ListItem>Blaze Orange</asp:ListItem>
-            <asp:ListItem>Dark Orange</asp:ListItem>
-            <asp:ListItem>After Burn</asp:ListItem>
-            <asp:ListItem>Texas Orange</asp:ListItem>
-            <asp:ListItem>Cardinal</asp:ListItem>
-            <asp:ListItem>Red</asp:ListItem>
-            <asp:ListItem>Crimson</asp:ListItem>
+		    <asp:ListItem>University Blue/White</asp:ListItem>
+            <asp:ListItem>Black/White</asp:ListItem>
+            <asp:ListItem>Pewter Grey/White</asp:ListItem>
+            <asp:ListItem>White/Black</asp:ListItem>
+            <asp:ListItem>Classic Green/White</asp:ListItem>
+            <asp:ListItem>College Navy/White</asp:ListItem>
+            <asp:ListItem>Omega Blue/White</asp:ListItem>
+		    <asp:ListItem>University Red/White</asp:ListItem>
 		</asp:DropDownList>
 		<asp:DropDownList ID="ddlColorLadies" runat="server" Width="205px">
-			<asp:ListItem Selected="True">Alpine</asp:ListItem>
-			<asp:ListItem>White</asp:ListItem>
-			<asp:ListItem>Blue Jet</asp:ListItem>
-			<asp:ListItem>Midnight Navy</asp:ListItem>
-			<asp:ListItem>High Vis Yellow</asp:ListItem>
-			<asp:ListItem>After Burn</asp:ListItem>
-			<asp:ListItem>Pink Shock</asp:ListItem>
-			<asp:ListItem>Cardinal</asp:ListItem>
-		    <asp:ListItem>Galaxy Purple</asp:ListItem>
+			<asp:ListItem Selected="True">Chalk Blue/White</asp:ListItem>
+			<asp:ListItem>White/Black</asp:ListItem>
+			<asp:ListItem>Red/White</asp:ListItem>
+			<asp:ListItem>Black/White</asp:ListItem>
 		</asp:DropDownList>
 		<asp:Label ID="lblShirtColor" runat="server" Text="Label" Visible="False"></asp:Label>
 	</td>

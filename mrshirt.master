@@ -7,9 +7,9 @@
 <head runat="server">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>MRMISGA Shirts</title>
-<link href="http://mrmisga.org/styles/style2.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="http://mrmisga.org/styles/print.css" rel="stylesheet" type="text/css" media="print" />
-<link rel="shortcut icon" href="http://mrmisga.org/favicon.ico" />
+<link href="http://mr.misga-signup.org/styles/style2.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="http://mr.misga-signup.org/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link rel="shortcut icon" href="http://mr.misga-signup.org/favicon.ico" />
 <asp:ContentPlaceHolder id="HeadContent" runat="server">
 </asp:ContentPlaceHolder>
 </head>
@@ -23,7 +23,7 @@
 	<!-- Begin Masthead -->
 	<div id="masthead">
 		<asp:Image ID="Hdr_Image" runat="server" style="width: 920px; padding-left: 20px; padding-right: 20px" 
-			ImageUrl="http://mrmisga.org/images/Musket-Ridge-MISGA-hdr-v1.jpg" ImageAlign="AbsMiddle" />
+			ImageUrl="http://mr.misga-signup.org/images/Musket-Ridge-MISGA-hdr-v1.jpg" ImageAlign="AbsMiddle" />
 		
 	
 	</div>
@@ -36,7 +36,7 @@
 	<div id="navigation">
 		
 		<ul>
-			<li><a href="http://mrmisga.org/default.htm" title="Main Web Site for Musket Ridge MISGA">MR MISGA</a></li>
+			<li><a href="http://mr.misga-signup.org/default.htm" title="Main Web Site for Musket Ridge MISGA">MR MISGA</a></li>
 
 			<li><a href="Default.aspx" title="Learn about ordering Musket Ridge MISGA Golf Shirts">Shirt Info</a></li>
 			<li><a href="PlaceOrder.aspx" title="Order a Musket Ridge MISGA Golf Shirt">Order Shirt</a></li>
@@ -51,16 +51,16 @@
 	</asp:ContentPlaceHolder>
 	</div>  <!-- page_content -->
 		<div id="footer">
-		<p><a href="http://mrmisga.org/default.htm">Home</a> | 
-			<a href="http://mrsga.org/Schedule/Default.aspx">Schedule</a> | 
-			<a href="http://mrmisga.org/results/results_main.html">Results</a> | 
-			<a href="http://mrmisga.org/about/about.html">Join Info</a> | 
-			<a href="http://mrmisga.org/news/default.html">News</a> | 
-			<a href="http://mrmisga.org/handicap/handicap.html">Handicap</a> | 
+		<p><a href="http://mr.misga-signup.org/default.htm">Home</a> | 
+			<a href="http://misga-signup.org/schedule.aspx?CLUB=232">Schedule</a> | 
+			<a href="http://mr.misga-signup.org/results/results_main.html">Results</a> | 
+			<a href="http://mr.misga-signup.org/documents/main.html">Documents</a> | 
+<!--			<a href="http://mr.misga-signup.org/news/default.html">News</a> |  -->
+			<a href="http://mr.misga-signup.org/handicap/handicap.html">Handicap</a> | 
 <!--		<a href="photo_gallery/default.html">Photo Gallery</a> | -->
-			<a href="http://mrmisga.org/information_links/default.html">Links</a> |
+			<a href="http://mr.misga-signup.org/information_links/default.html">Links</a> |
 <!--		<a href="faq/default.html">FAQ</a> | -->
-			<a href="http://mrmisga.org/contact/default.html">Contact</a> | 
+			<a href="http://mr.misga-signup.org/contact/default.html">Contact</a> | 
 			<a href="http://www.musketridge.com" target="_blank" title="Musket Ridge Website">Musket Ridge</a> | </p>
 	</div>
 	<!-- End Footer -->

@@ -39,7 +39,7 @@
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color">
-                <HeaderStyle HorizontalAlign="Center" Width="100px" />
+                <HeaderStyle HorizontalAlign="Center" Width="200px" />
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:BoundField DataField="CustID" HeaderText="CustID" SortExpression="CustID">
