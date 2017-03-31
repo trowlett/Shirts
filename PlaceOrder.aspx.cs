@@ -94,57 +94,67 @@ public partial class PlaceOrder : System.Web.UI.Page
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
+        int nameErr = 0;
         btnSubmit.Enabled = false;
+        string color = "";
+        string size = "";
+        int qty = 0;
         string lname = Proper(tbLastName.Text.Trim());
         string fname = Proper(tbFirstName.Text.Trim());
-        CustomerName = fname + " " + lname;
-        int qty = Convert.ToInt32(ddlQty.SelectedValue);
-        string color = MensRequiredShirtColor;
-        string size = "";
-        lblStyle.Visible = false;
-        string style = ddlShirt.SelectedValue.ToString();
-//        lblNumber.Text = ddlQty.SelectedIndex.ToString();
-//        if (ddlQty.SelectedIndex != 0)
-//        {
-//            lblStyle.Text = ddlShirt.SelectedIndex.ToString();
-        if (ddlShirt.SelectedIndex != 0)
-        {
-            if (ddlShirt.SelectedIndex == 1)
+        if (lname == "") nameErr = 1;       // must enter name
+        if (fname == "") nameErr = 1;       // must entre Name
+        if (nameErr == 0) {
+            CustomerName = fname + " " + lname;
+            string style = ddlShirt.SelectedValue.ToString();
+            //        lblNumber.Text = ddlQty.SelectedIndex.ToString();
+            //        if (ddlQty.SelectedIndex != 0)
+            //        {
+            //            lblStyle.Text = ddlShirt.SelectedIndex.ToString();
+            if (ddlShirt.SelectedIndex != 0)
             {
-                color = ddlColorMens.SelectedValue.ToString();
-                RequiredShirtColor = MensRequiredShirtColor;
-                size = ddlSizeMens.SelectedValue.ToString();
-            }
-            if (ddlShirt.SelectedIndex == 2)
-            {
-                color = ddlColorLadies.SelectedValue.ToString();
-                RequiredShirtColor = WomensRequiredShirtColor;
-                size = ddlSizeLadies.SelectedValue.ToString();
-            }
-            //                lblShirtColor.Text = color;
-            //                lblShirtSize.Text = size;
-           Order ord = new Order();
-           bool OrderOK = ord.addOrder(lname, fname, qty, style, size, color, RequiredShirtColor);
-            //                lblCustID.Text = ord.CustomerID.ToString();
-            if (OrderOK)
-            {
-                lblOrderResult.Text = string.Format("Thank you {0} for your order.",CustomerName);
-                lblOrderResult.ForeColor = System.Drawing.Color.Black;
+                if (ddlShirt.SelectedIndex == 1)
+                {
+                    color = ddlColorMens.SelectedValue.ToString();
+                    RequiredShirtColor = MensRequiredShirtColor;
+                    size = ddlSizeMens.SelectedValue.ToString();
+                }
+                if (ddlShirt.SelectedIndex == 2)
+                {
+                    color = ddlColorLadies.SelectedValue.ToString();
+                    RequiredShirtColor = WomensRequiredShirtColor;
+                    size = ddlSizeLadies.SelectedValue.ToString();
+                }
+                //                lblShirtColor.Text = color;
+                //                lblShirtSize.Text = size;
+                qty = Convert.ToInt32(ddlQty.SelectedValue);
+                Order ord = new Order();
+                bool OrderOK = ord.addOrder(lname, fname, qty, style, size, color, RequiredShirtColor);
+                //                lblCustID.Text = ord.CustomerID.ToString();
+                if (OrderOK)
+                {
+                    lblOrderResult.Text = string.Format("Thank you {0} for your order.", CustomerName);
+                    lblOrderResult.ForeColor = System.Drawing.Color.Black;
+                }
+                else
+                {
+                    lblOrderResult.Text = string.Format("You must order a {0} color shirt first before you can order a shirt of another color.  Order not saved.", RequiredShirtColor);
+                    lblOrderResult.ForeColor = System.Drawing.Color.Firebrick;
+                    btnSubmit.Enabled = true;
+                }
             }
             else
             {
-                lblOrderResult.Text = string.Format("You must order a {0} color shirt first before you can order a shirt of another color.  Order not saved.",RequiredShirtColor);
+                lblStyle.Text = "You must select a Shirt Style.";
+                lblStyle.ForeColor = System.Drawing.Color.Firebrick;
+                lblStyle.Visible = true;
+                lblOrderResult.Text = "Order NOT placed.";
                 lblOrderResult.ForeColor = System.Drawing.Color.Firebrick;
-                btnSubmit.Enabled = true;
             }
         }
         else
         {
-            lblStyle.Text = "You must select a Shirt Style.";
-            lblStyle.ForeColor = System.Drawing.Color.Firebrick;
-            lblStyle.Visible = true;
-            lblOrderResult.Text = "Order NOT placed.";
-            lblOrderResult.ForeColor = System.Drawing.Color.Firebrick;
+            lblOrderResult.Text = string.Format("Please enter your name and try again");
+
         }
 //        }
  

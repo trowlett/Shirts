@@ -13,6 +13,9 @@ public partial class _Default : System.Web.UI.Page
     public DateTime od { get; set; }
     public string orderDateText;
     public string prePayDateText;
+    public string MensRequiredShirtColor;
+    public string WomensRequiredShirtColor;
+    public string RequiredShirtColor { get; set; }
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,11 +27,16 @@ public partial class _Default : System.Web.UI.Page
         orderDateText = od.AddDays(1).ToString("MMMM  d");
         prePayDateText = od.ToString("MMMM d");
 //        lblOrderDate.Text = orderDateText;
-        lblOD1.Text = orderDateText;
+//        lblOD1.Text = orderDateText;
         lblPrePayDate.Text = prePayDateText;
-        lblPPD1.Text = prePayDateText;
+//        lblPPD1.Text = prePayDateText;
         lblPPD2.Text = prePayDateText;
 
+        MensRequiredShirtColor = ConfigurationManager.AppSettings["MensDefaultShirtColor"].ToString();
+        WomensRequiredShirtColor = ConfigurationManager.AppSettings["WomensDefaultShirtColor"].ToString();
+        RequiredShirtColor = MensRequiredShirtColor;
+        lblShirtColor1.Text = RequiredShirtColor;
+        lblDSC2.Text = RequiredShirtColor;
     }
 
     private string TimeRemaining(DateTime EndDate)
