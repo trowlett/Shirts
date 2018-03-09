@@ -39,13 +39,13 @@ public partial class PlaceOrder : System.Web.UI.Page
         enddate = Convert.ToDateTime(ConfigurationManager.AppSettings["ShirtDeadline"]);
             if (!IsPostBack)
             {
-                resetDropDowns();
+//                resetDropDowns();
             }
         if (today.CompareTo(enddate) > 0)
         {
             btnSubmit.Enabled = false;
-            lblNoOrders.Text = "<h2>Today is after "+enddate.ToLongDateString()+". Sorry no more orders are accepted.</h2>";
-            OrderPanel.Visible = false;
+            //            lblNoOrders.Text = "<h2>Today is after "+enddate.ToLongDateString()+". Sorry no more orders are accepted.</h2>";
+            lblNoOrders.Text = "<h2>It's after " + enddate.ToLongDateString() + ". Sorry no more orders are accepted.</h2>"; OrderPanel.Visible = false;
                     }
         MensRequiredShirtColor = ConfigurationManager.AppSettings["MensDefaultShirtColor"].ToString();
         WomensRequiredShirtColor = ConfigurationManager.AppSettings["WomensDefaultShirtColor"].ToString();
@@ -98,6 +98,7 @@ public partial class PlaceOrder : System.Web.UI.Page
         btnSubmit.Enabled = false;
         string color = "";
         string size = "";
+        string length = "";
         int qty = 0;
         string lname = Proper(tbLastName.Text.Trim());
         string fname = Proper(tbFirstName.Text.Trim());
@@ -117,18 +118,20 @@ public partial class PlaceOrder : System.Web.UI.Page
                     color = ddlColorMens.SelectedValue.ToString();
                     RequiredShirtColor = MensRequiredShirtColor;
                     size = ddlSizeMens.SelectedValue.ToString();
+                    length = ddlLengthMens.SelectedValue.ToString();
                 }
                 if (ddlShirt.SelectedIndex == 2)
                 {
                     color = ddlColorLadies.SelectedValue.ToString();
                     RequiredShirtColor = WomensRequiredShirtColor;
                     size = ddlSizeLadies.SelectedValue.ToString();
+                    length = ddlLengthMens.SelectedValue.ToString();
                 }
                 //                lblShirtColor.Text = color;
                 //                lblShirtSize.Text = size;
                 qty = Convert.ToInt32(ddlQty.SelectedValue);
                 Order ord = new Order();
-                bool OrderOK = ord.addOrder(lname, fname, qty, style, size, color, RequiredShirtColor);
+                bool OrderOK = ord.addOrder(lname, fname, qty, style, size, length, color, RequiredShirtColor);
                 //                lblCustID.Text = ord.CustomerID.ToString();
                 if (OrderOK)
                 {
@@ -153,8 +156,8 @@ public partial class PlaceOrder : System.Web.UI.Page
         }
         else
         {
-            lblOrderResult.Text = string.Format("Please enter your name and try again");
-
+            lblOrderResult.Text = string.Format("Please enter your name and try again by selecting Order Shirt above.");
+            int q = 1;
         }
 //        }
  

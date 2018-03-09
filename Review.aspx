@@ -37,6 +37,7 @@
 				<th class="Qty">Qty</th>
 				<th class="Style">Style</th>
 				<th class="Size">Size</th>
+<!--                <th class="Size">Length</th> -->
 				<th class="Color">Color</th>
 				<th class="Date">Date</th>
 <!--				<th class="CancelHdr">Cancel</th> -->
@@ -50,6 +51,7 @@
 				<td class="Qty"><%# ((OrderEntry)Container.DataItem).Qty %></td>
 				<td class="Style"><%# ((OrderEntry)Container.DataItem).Style %></td>
 				<td class="Size"><%# ((OrderEntry)Container.DataItem).Size %></td>
+<!--                <td class="Size"><%# ((OrderEntry)Container.DataItem).Length %></td> -->
 				<td class="Color"><%# ((OrderEntry)Container.DataItem).Color %></td>
 				<td class="Date"><%# ((OrderEntry)Container.DataItem).Date.ToShortDateString() %></td>
 <!--				<td class="Cancel"><%# ((OrderEntry)Container.DataItem).Cancel %></td> -->

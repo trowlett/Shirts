@@ -29,22 +29,22 @@
         </h2>
     <hr />
     <p>
-        We will again be putting in an order for Musket Ridge MISGA shirts for this 
-        season. The shirt is from Footjoy. It will have the Musket Ridge Golf 
-        Club logo on the front and MISGA on the sleeve. 
+       We will again be ordering Musket Ridge MISGA shirts for this season.  The shirt is from Underarmour.  It will have the 
+        Musket Ridge Golf Club logo on the front and MISGA on the sleeve.
+
 
     </p>
     <p>
-        Here is a link to the Footjoy Website showing the Footjoy shirt:<br /> 
-        <a href="http://www.footjoy.com/lisle-feeder-stripe-knit-collar/137PDS.html?dwvar_137PDS_color=32734#q=shirts&gclid=Cj0KEQiAlsrFBRCAxcCB54XElLEBEiQA_ei0DDT2juMNyP95tk0TrrgAvIEFVr_p6KJ7aWTbDIXwWyAaAlbz8P8HAQ&start=22">
-                 http://www.footjoy.com/lisle-feeder-stripe-knit-collar/137PDS.html?dwvar_137PDS_color=32734#q=shirts&gclid=Cj0KEQiAlsrFBRCAxcCB54XElLEBEiQA_ei0DDT2juMNyP95tk0TrrgAvIEFVr_p6KJ7aWTbDIXwWyAaAlbz8P8HAQ&start=22</a>
+       Here is a link to the Underarmour website showing the shirt: <br /> 
+        <a href="https://www.underarmour.com/en-us/threadborne-boundless-polo/pid1306112-437">
+                 https://www.underarmour.com/en-us/threadborne-boundless-polo/pid1306112-437</a>
         &nbsp;&nbsp;
     </p>
     <p>
         The color we will be ordering is 
         "<asp:Label ID="lblShirtColor1" runat="server" Text="Default Shirt Color"></asp:Label>
         ” and is similar to the color shirt we have traditionally 
-        used, though this one has a narrow stripe and a contrasting color.&nbsp; You will see a link to a size 
+        used, though this one has a stripe pattern with solid color sleeves and collar.&nbsp; You will see a link to a size 
         guide on the website if you are unsure as to what size to order. 
 
     </p>
@@ -63,16 +63,15 @@
         You can order additional shirts if you wish (at the full price of $62.17), 
         in whatever color you wish, but the first order must in the 
         "<asp:Label ID="lblDSC2" runat="server" Text="Default Shirt Color"></asp:Label>" color. 
-<!--        Additional shirts ordered will be at the full price. -->
 
     </p>
     <div id="to_order">
         <p>To place an order:</p>
         <ul>
             <li> click on the Order Shirt tab above.&nbsp; To order more than 
-                one style or size shirt, please place a separate order for each unique Style and size.&nbsp; 
+                one style or size shirt, please place a separate order for each unique Color and size.&nbsp; 
                 </li>
-            <li>Review your completed order by clicking on the Review Order tab.</li>
+            <li>Review your completed order by clicking on the "Review Order" tab.</li>
             <li>You will be notified when the shirt order has arrived at the golf shop (three to four weeks after April 18). </li>
             <li>To change or cancel your order, contact Tom Rowlett via email 
                 <a href="mailto:tom.rowlett@gmail.com?subject=Change MR MISGA Shirt Order">Tom.Rowlett@gmail.com</a> or phone (301) 473-4785.</li>
@@ -81,7 +80,7 @@
         <p class="bold">To pay:</p>
     <p>
         You can do this by sending the Musket Ridge Pro Shop a check (in the amount of $52.17 for the first shirt and $62.17 for each additional shirt), 
-        calling them to pay via credit card, or paying in person at the pro shop by 
+        calling them to pay via credit card, or paying in person at the pro shop by c.o.b.  
     <asp:Label ID="lblPrePayDate" runat="server" Text="PrePay Date" ForeColor="Firebrick"></asp:Label>. 
 
    &nbsp; <span style="color: firebrick;" class="bold"> If you do not pay by that date, no shirt(s) will be ordered for you.</span> 
@@ -100,8 +99,8 @@
         </p>
         -->
         <p>
-            We must have a minimum of 12 shirts ordered.  
-            So, it is possible that there will be no shirts ordered this year if we do not meet this minimum.
+            We must have a minimum of 24 shirts ordered.  
+            So, it is possible that there will be no shirts ordered this year (if we  fall short of this number).
         </p>
     </div>
     

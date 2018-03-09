@@ -66,12 +66,12 @@
 		<asp:DropDownList ID="ddlShirt" runat="server" AutoPostBack="True" 
 			onselectedindexchanged="ddlShirt_SelectedIndexChanged" Width="205px" 
 			CausesValidation="True">
-			<asp:ListItem Selected="True"> (Select one)</asp:ListItem>
-			<asp:ListItem>MEN&#39;S FOOTJOY</asp:ListItem>
+			<asp:ListItem Enabled="False"> (Select one)</asp:ListItem>
+			<asp:ListItem Selected="True">MEN&#39;S UNDER ARMOR</asp:ListItem>
 		</asp:DropDownList>
 		<asp:Label ID="lblStyle" runat="server" 
             Text=" (Color and Size options will show once Shirt Style is selected)" 
-            Visible="true" ForeColor="Firebrick"></asp:Label>
+            Visible="False" ForeColor="Firebrick"></asp:Label>
 	</td>
 	</tr>
 	
@@ -98,17 +98,14 @@
 	</td>
 	<td>
 		<asp:DropDownList ID="ddlColorMens" runat="server" Width="205px">
-		    <asp:ListItem Selected="True">MARINE / GREY</asp:ListItem>
-            <asp:ListItem>BLACK / WHITE</asp:ListItem>
-            <asp:ListItem>RED / WHITE</asp:ListItem>
-            <asp:ListItem>NAVY / WHITE</asp:ListItem>
-            <asp:ListItem>ORANGE / WHITE</asp:ListItem>
-            <asp:ListItem>ORCHID / WHITE</asp:ListItem>
-            <asp:ListItem>LIGHT PURPLE / WHITE</asp:ListItem>
-		    <asp:ListItem>HUNTER / WHITE</asp:ListItem>
-		    <asp:ListItem>ROYAL / WHITE</asp:ListItem>
+		    <asp:ListItem Selected="True" Value="Mediterranean">Mediterranean</asp:ListItem>
+            <asp:ListItem Value="Tropical Tide">Tropical Tide</asp:ListItem>
+            <asp:ListItem Value="Jupiter Blue">Jupiter Blue</asp:ListItem>
+            <asp:ListItem Value="Lumos Lime">Lumos Lime</asp:ListItem>
+            <asp:ListItem Value="Academy">Academy</asp:ListItem>
+            <asp:ListItem Value="Black">Black</asp:ListItem>
 		</asp:DropDownList>
-		<asp:DropDownList ID="ddlColorLadies" runat="server" Width="205px">
+		<asp:DropDownList ID="ddlColorLadies" runat="server" Width="205px" Visible="False">
 			<asp:ListItem Selected="True">Chalk Blue/White</asp:ListItem>
 			<asp:ListItem>White/Black</asp:ListItem>
 			<asp:ListItem>Red/White</asp:ListItem>
@@ -117,10 +114,21 @@
 		<asp:Label ID="lblShirtColor" runat="server" Text="Label" Visible="False"></asp:Label>
 	</td>
 	</tr>
+        <tr style="visibility: hidden;">
+            <td class="style1">
+                <asp:Label ID="lblLength" runat="server" Text="Length:" Visible="False"></asp:Label>
+                </td>
+            <td>
+                <asp:DropDownList ID="ddlLengthMens" runat="server" Width="205px" Visible="False">
+                    <asp:ListItem Selected="True">Regular</asp:ListItem>
+                    <asp:ListItem>Tall</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+        </tr>
 	<tr>
 	<td class="style1">
 		<asp:Label ID="lblSize" runat="server" Text="Size"></asp:Label>
-	</td>
+	    :</td>
 	<td>
 		<asp:DropDownList ID="ddlSizeMens" runat="server" Width="205px">
 			<asp:ListItem>Small</asp:ListItem>
@@ -128,8 +136,9 @@
 			<asp:ListItem Selected="True">Large</asp:ListItem>
 			<asp:ListItem>X-Large</asp:ListItem>
 			<asp:ListItem>2X-Large</asp:ListItem>
+		    <asp:ListItem>3X-Large</asp:ListItem>
 		</asp:DropDownList>
-		<asp:DropDownList ID="ddlSizeLadies" runat="server" Width="205px">
+		<asp:DropDownList ID="ddlSizeLadies" runat="server" Width="205px" Visible="False">
 			<asp:ListItem>X-Small</asp:ListItem>
 			<asp:ListItem>Small</asp:ListItem>
 			<asp:ListItem Selected="True">Medium</asp:ListItem>
